@@ -10,4 +10,4 @@ An AI-powered student task assistant built with Streamlit and Claude.
 
 ## Run locally
 pip install -r requirements.txt
-streamlit run student_ai_app.py
+streamlit run app.py
