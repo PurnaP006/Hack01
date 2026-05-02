@@ -1,10 +1,13 @@
-from flask import Flask
+import streamlit as st
 
-app = Flask(__name__)
+st.title("🤖 AI Task Automation Agent")
 
-@app.route('/')
-def hello():
-    return 'Hello, World!'
+task = st.text_input("Enter your task:")
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if st.button("Run"):
+    if "email" in task.lower():
+        st.success("📧 Email sent (demo)")
+    elif "remind" in task.lower():
+        st.success("⏰ Reminder set (demo)")
+    else:
+        st.write("🤖 Task processed:", task)
