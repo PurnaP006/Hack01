@@ -1,6 +1,10 @@
 import streamlit as st
 import anthropic
 
+# Retrieve the key from secrets
+client = anthropic.Anthropic(
+    api_key=st.secrets["ANTHROPIC_API_KEY"]
+)
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="StudyMate AI",
