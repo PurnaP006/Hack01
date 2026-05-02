@@ -341,7 +341,6 @@ if generate:
     else:
         with st.spinner("🔵 AI is thinking…"):
             try:
-                client = anthropic.Anthropic()
                 prompt = build_prompt(task, user_input, extra)
                 message = client.messages.create(
                     model="claude-sonnet-4-20250514",
